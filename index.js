@@ -19,6 +19,7 @@ app.get('/users',(req,res)=>{
     res.send(users)
 })
 app.post('/users',(req,res)=>{
+    console.log('Post api hiting')
     console.log(req.body)
 })
 app.listen(port,(req,res)=>{

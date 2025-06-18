@@ -33,6 +33,12 @@ async function run() {
     const database = client.db("usersDB");
     const userCollection = database.collection("users");
 
+    app.get('/user',async(req,res)=>{
+        const cursor = userCollection.find()
+        const result=await cursor.toArray()
+        res.send(result)
+    })
+
     app.post('/users',async (req,res)=>{
     console.log('Post api hiting')
     

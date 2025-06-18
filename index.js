@@ -16,7 +16,7 @@ const users=[
 //username: taosifsadhin113
 //mongodb code start
 
-const uri = "mongodb+srv://taosifsadhin113:PUJcZgkHBvUHaL7C@sadhin.ix1e55h.mongodb.net/?retryWrites=true&w=majority&appName=sadhin";
+const uri = "mongodb+srv://taosifsadhin113:PUJcZgkHBvUHaL7C@user-management-system.h2w7at6.mongodb.net/?retryWrites=true&w=majority&appName=user-management-system";
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -34,7 +34,7 @@ async function run() {
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
-    await client.close();
+    // await client.close();
   }
 }
 run().catch(console.dir);

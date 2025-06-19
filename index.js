@@ -52,6 +52,10 @@ async function run() {
     console.log(result)
     // console.log(req.body)
     
+});
+app.delete('/user/:id',(req,res)=>{
+  const id =req.params.id;
+  console.log('plase delate from database',id)
 })
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });

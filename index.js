@@ -39,6 +39,9 @@ async function run() {
         res.send(result)
     })
 
+    app.get('/userss/:id',async(req,res)=>{
+       const id = req.params.id
+    })
     app.post('/users',async (req,res)=>{
     console.log('Post api hiting')
     

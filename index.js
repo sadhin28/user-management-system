@@ -47,7 +47,7 @@ async function run() {
     // newuser.id= users.length + 1;
     console.log('new user',newuser)
     // users.push(newuser);
-    // res.send(newuser);
+    // res.send(newuser);;
     res.send(result)
     console.log(result)
     // console.log(req.body)

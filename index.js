@@ -41,10 +41,32 @@ async function run() {
 
     app.get('/userss/:id',async(req,res)=>{
        const id = req.params.id
+       const query = {_id : new ObjectId(id)}
+       const user = await userCollection.findOne(query)
+       res.send(user)
     })
+     app.put('/userss/:id',async(req,res)=>{
+        const id =req.params.id;
+        
+        const data= req.body;
+        console.log(id,data)
+        const filter = {_id: new ObjectId(id)}
+        const options = { upsert: true }
+        updateuser ={
+          $set:{
+             name:data.name,
+             email:data.email
+          }
+        }
+         const result = await userCollection.updateOne(filter, updateuser, options);
+         res.send(result);
+
+        })
+
     app.post('/users',async (req,res)=>{
     console.log('Post api hiting')
     
+   
     const newuser = req.body;
      const result = await userCollection.insertOne(newuser);
     // newuser.id= users.length + 1;

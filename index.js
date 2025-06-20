@@ -33,7 +33,7 @@ async function run() {
     const database = client.db("usersDB");
     const userCollection = database.collection("users");
 
-    app.get('/user',async(req,res)=>{
+    app.get('/userss',async(req,res)=>{
         const cursor = userCollection.find()
         const result=await cursor.toArray()
         res.send(result)
@@ -53,7 +53,7 @@ async function run() {
     // console.log(req.body)
     
 });
-app.delete('/user/:id',async (req,res)=>{
+app.delete('/userss/:id',async (req,res)=>{
   const id =req.params.id;
   console.log('plase delate from database',id)
   const query =  {_id: new ObjectId( id)}

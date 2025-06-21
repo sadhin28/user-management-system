@@ -75,7 +75,7 @@ async function run() {
     res.send(newuser);
     res.send(result)
     console.log(result)
-    // console.log(req.body)
+    
     
 });
 app.delete('/userss/:id',async (req,res)=>{

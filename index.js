@@ -16,6 +16,7 @@ const users=[
 //username: taosifsadhin113
 //mongodb code start
 
+  // const uri='mongodb://localhost:27017'
 const uri = "mongodb+srv://taosifsadhin113:PUJcZgkHBvUHaL7C@user-management-system.h2w7at6.mongodb.net/?retryWrites=true&w=majority&appName=user-management-system";
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
